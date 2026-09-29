@@ -6,9 +6,9 @@ project(startrader BASIC)
 
 add_executable(startrader)
 rp6502_asset(startrader help src/help.txt)
-rp6502_asset(startrader loader.bas src/loader.bas)
+rp6502_asset(startrader autorun.bas src/autorun.bas)
 rp6502_asset(startrader startrader.bas src/startrader.bas)
-rp6502_basic(startrader loader.bas)
+rp6502_basic(startrader)
 rp6502_web(startrader CONFIG [[
     title: 'Star Trader',
     border: '1em',

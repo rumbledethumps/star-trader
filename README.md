@@ -41,7 +41,7 @@ Type a command letter, then press Enter:
 
 The `basic` preset packages BASIC with `src/startrader.bas` into one ROM,
 `build/basic/startrader.rp6502`. When BASIC starts, it runs
-`src/loader.bas`, which says the game is loading and runs
+`src/autorun.bas`, which says the game is loading and runs
 `src/startrader.bas`; the load takes about 15 seconds. The configure
 fetches the latest release of BASIC, and the first configure also
 downloads the emulator into `tools/`.
