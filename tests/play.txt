@@ -1,0 +1,157 @@
+# Plays Star Trader and a second game; ctest --preset basic runs it.
+# The seed fixes the galaxy and the prices, so the numbers below hold.
+wait "Instructions (Y/N)" 3000
+type "Y\r"
+wait "May you bank a gigabuck or two" 600
+wait "Press ENTER to start" 600
+type "\r"
+wait "What is the name of your ship" 600
+type "Serenity\r"
+wait "VALID COMMANDS ARE" 600
+wait "CMD" 600
+type "I\r"
+wait "WAREHOUSE (Sol)    Serenity" 600
+wait "Docked at Sol.  Stardate 2206.78" 600
+wait "Cash: 5000          Credit:-95000" 600
+wait "Rank: Ensign" 600
+wait "CMD" 600
+# Buy with a blank and a bad item first: both ask again.
+type "T\r"
+wait "TRADE PRICES for Sol:" 600
+wait "'B'uy  'S'ell  'Q'uit  'R'epair" 600
+type "B\r"
+wait "BUY #" 600
+type "\r"
+type "9\r"
+type "0\r"
+wait "Food    ...Amt. ( 232 )" 600
+type "-5\r"
+wait "'B'uy  'S'ell  'Q'uit  'R'epair" 600
+type "B\r"
+wait "BUY #" 600
+type "0\r"
+wait "...Amt." 600
+type "100\r"
+wait "'B'uy  'S'ell  'Q'uit  'R'epair" 600
+type "S\r"
+wait "Sell #" 600
+type "0\r"
+wait "...Amt." 600
+type "50\r"
+wait "'B'uy  'S'ell  'Q'uit  'R'epair" 600
+type "R\r"
+wait "Repairs 0" 600
+type "5\r"
+wait "'B'uy  'S'ell  'Q'uit  'R'epair" 600
+type "Q\r"
+wait "Cash: 3925          Credit:-95000" 600
+wait "CMD" 600
+type "M\r"
+wait "Capitol" 600
+wait "CMD" 600
+# The warehouse, at Sol.
+type "U\r"
+wait "Unload what" 600
+type "0\r"
+wait "- how much" 600
+type "20\r"
+wait " 0-Food     20      0-Food     30" 600
+wait "CMD" 600
+type "L\r"
+wait "Load what" 600
+type "0\r"
+wait "- how much" 600
+type "10\r"
+wait " 0-Food     10      0-Food     40" 600
+wait "CMD" 600
+# The bank, at Sol.
+type "D\r"
+wait "Deposit" 600
+type "1000\r"
+wait "Cash: 2925          Credit:-94000" 600
+wait "CMD" 600
+type "B\r"
+wait "Borrow/Withdraw" 600
+type "500\r"
+wait "Cash: 3425          Credit:-94500" 600
+wait "CMD" 600
+# Jump: abort, the same system, then Tau Ceti.
+type "J\r"
+wait "ORIGIN SYSTEM: Sol" 600
+wait "('Q' to abort)" 600
+type "Q\r"
+wait "Rank: Ensign" 600
+wait "CMD" 600
+type "J\r"
+wait "('Q' to abort)" 600
+type "0\r"
+wait "ORIGIN AND DEST. THE SAME!" 600
+wait "Rank: Ensign" 600
+wait "CMD" 600
+type "J\r"
+wait " 3 - Tauceti   16" 600
+wait "('Q' to abort)" 600
+type "\r"
+type "3\r"
+wait "En route to Tauceti." 600
+wait "Docked at Tauceti.  Stardate 2206.94" 600
+wait "Fuel 8.4" 600
+wait "CMD" 600
+# No bank at an Emerging system.
+type "B\r"
+wait "VALID COMMANDS ARE" 600
+wait "CMD" 600
+type "T\r"
+wait "TRADE PRICES for Tauceti:" 600
+wait "'B'uy  'S'ell  'Q'uit  'R'epair" 600
+type "S\r"
+wait "Sell #" 600
+type "0\r"
+wait "...Amt." 600
+type "999\r"
+wait "'B'uy  'S'ell  'Q'uit  'R'epair" 600
+type "Q\r"
+wait "Cash: 4019.8" 600
+wait "CMD" 600
+# The new year brings the Trade Ministry report.
+type "J\r"
+wait "('Q' to abort)" 600
+type "1\r"
+wait "En route to Proxima." 600
+wait "TRADE MINISTRY REPORT FOR STAR YEAR 2207" 600
+wait "Procyon       Recession" 600
+wait "Press ENTER to continue" 600
+type "\r"
+wait "Docked at Proxima.  Stardate 2207.09" 600
+wait "CMD" 600
+# Quit: no, then yes.
+type "Q\r"
+wait "QUIT: Are you sure (Y/N)" 600
+type "N\r"
+wait "Rank: Ensign" 600
+wait "CMD" 600
+type "Q\r"
+wait "QUIT: Are you sure (Y/N)" 600
+type "Y\r"
+wait "In Star Year 2207" 600
+wait "Ship's tonnage: 100" 600
+wait "Final rank: Ensign" 600
+wait "Type RUN to play again." 600
+wait "OK" 600
+# A second game.
+type "RUN\r"
+wait "Instructions (Y/N)" 3000
+type "N\r"
+wait "What is the name of your ship" 600
+type "\r"
+wait "What is the name of your ship" 600
+type "Nostromo\r"
+wait "CMD" 600
+type "I\r"
+wait "SHIP DATA FOR Nostromo" 600
+wait "CMD" 600
+type "Q\r"
+wait "QUIT: Are you sure (Y/N)" 600
+type "Y\r"
+wait "Type RUN to play again." 600
+wait "OK" 600

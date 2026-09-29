@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  startrader:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+
+      # The configure fetches the emulator into tools/.
+      - name: Build and play
+        run: |
+          set -euo pipefail
+          cmake --preset basic
+          cmake --build --preset basic
+          ctest --preset basic

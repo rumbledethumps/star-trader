@@ -1,0 +1,5 @@
+Star Trader
+By Dave Kaufman, 1973. Solo version by Richard Woolcock
+and Cameron Duffy, 1984. Revised by Dave Hassler, 2026.
+
+Type a command letter, then press Enter. Q quits.
